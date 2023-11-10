@@ -1,10 +1,15 @@
-public class LifelineSite implements Site{
-//    double _units = 10;
-//    double _rate= 15;
+public class LifelineSite extends Site {
+
+    public LifelineSite(){
+        super();
+    }
+
     @Override
-    public double getBillableAmount() {
-        double base = _units * _rate * 0.5;
-        double tax = base * Site.TAX_RATE * 0.2;
-        return base + tax;
+    public double getBaseAmount() {
+        return super.getBaseAmount() * 0.5;
+    }
+    @Override
+    public double getTaxAmount() {
+        return super.getTaxAmount() * 0.2;
     }
 }

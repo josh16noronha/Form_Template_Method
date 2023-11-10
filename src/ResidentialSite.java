@@ -1,7 +1,6 @@
-public class ResidentialSite implements Site{
+public class ResidentialSite extends Site {
 
-    @Override
-    public double getBillableAmount() {
-
+    public ResidentialSite(){
+        super();
     }
 }
